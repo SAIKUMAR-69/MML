@@ -1,0 +1,9 @@
+import numpy as np
+import math
+v = [3, -4, 1]
+L1 = sum(abs(i) for i in v)
+L2 = math.sqrt(sum(abs(i)**2 for i in v))
+L_infinity = max(abs(i) for i in v)
+print("The L1 norm is: ", L1)
+print("The L2 norm is: ", L2)
+print("The L_infinity norm is: ", L_infinity)
