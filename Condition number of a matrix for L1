@@ -1,0 +1,14 @@
+import numpy as np
+import math
+A = np.matrix([[2,-1,1],[1,0,1],[3,-1,4]])
+
+L1 = np.sum(np.abs(A), axis=0)
+print("L1 norm of the matrix A is:",np.max(L1))
+
+A1 = np.linalg.inv(A)
+
+L11 = np.sum(np.abs(A1), axis=0)
+print("L1 norm of the matrix A_inverse is:",np.max(L11))
+
+cond_A = np.max(L1) * np.max(L11)
+print("The condition number of A is:",cond_A)
