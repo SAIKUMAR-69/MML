@@ -1,0 +1,12 @@
+import numpy as np
+import math
+mat = np.matrix([[3,-2,4,6],[-1,7,2,-8],[4,-1,-6,-20]])
+
+s1 = np.sum(np.abs(mat), axis=0)
+print("L1 norm of the matrix is:",np.max(s1))
+
+L2 = np.sum(np.power(mat,2))
+print("L2 norm (Frobenius norm) of the matrix is:", math.sqrt(L2))
+
+Li=np.sum(np.abs(mat),axis=1)
+print("L_infinity norm of the matrix is:",np.max(Li))
