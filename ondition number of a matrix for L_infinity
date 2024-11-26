@@ -1,0 +1,14 @@
+import numpy as np
+import math
+mat = np.matrix([[2,-1,1],[1,0,1],[3,-1,4]])
+
+Li=np.sum(np.abs(mat),axis=1)
+print("L_infinity norm of the matrix is:",np.max(Li))
+
+A1 = np.linalg.inv(A)
+
+Lii=np.sum(np.abs(A1),axis=1)
+print("L_infinity norm of the matrix is:",np.max(Lii))
+
+cond_A = np.max(Li) * np.max(Lii)
+print("The condition number of A is:",cond_A)
