@@ -1,0 +1,14 @@
+import numpy as np
+import math
+A = np.matrix([[2,-1,1],[1,0,1],[3,-1,4]])
+
+L2 = np.sum(np.power(A,2))
+print("L2 norm (Frobenius norm) of the matrix is:", math.sqrt(L2))
+
+A1 = np.linalg.inv(A)
+
+L22 = np.sum(np.power(A1,2))
+print("L2 norm (Frobenius norm) of the matrix is:", math.sqrt(L22))
+
+cond_A = math.sqrt(L2) * math.sqrt(L22)
+print("The condition number of A is:",cond_A)
